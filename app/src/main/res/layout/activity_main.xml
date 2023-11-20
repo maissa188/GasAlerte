@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="SurveillanceGaz"
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/AdresseBrokerEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Adresse du Broker"
+        android:inputType="text"
+        android:paddingStart="16dp" />
+
+    <EditText
+        android:id="@+id/PortEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/AdresseBrokerEditText"
+        android:layout_marginTop="10dp"
+        android:hint=" Port"
+        android:paddingStart="16dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/TopicEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/PortEditText"
+        android:layout_marginTop="10dp"
+        android:hint=" Topic"
+        android:paddingStart="16dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/SeuilEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/TopicEditText"
+        android:layout_marginTop="10dp"
+        android:hint="Seuil"
+        android:paddingStart="16dp"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SeuilEditText"
+        android:layout_marginTop="16dp"
+        android:text="Connexion"
+        android:textColor="@color/white"
+        android:backgroundTint="#2196F3"
+        android:layout_centerHorizontal="true"
+        android:onClick="startButtonClick" />
+
+    <TextView
+        android:id="@+id/gasValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startButton"
+        android:layout_marginTop="19dp"
+        android:text="Valeur du gaz : "
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="10dp"
+        android:text="Historique"
+        android:textAlignment="center"
+        android:textColor="#1976D2"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/list_id"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textItem"
+        android:layout_marginTop="10dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+</RelativeLayout>
